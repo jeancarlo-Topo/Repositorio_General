@@ -1,9 +1,7 @@
 menu = """
-Bienvenido ala calculadora, la mejor calculadora que puedas
-encontrar, por favor ingresa los datos, recuerda que en el caso de las
-multiplicacion,division y potencia el valor 2 seria el valor que se use 
-como multiplicador o divisor o potencia respectivamente.
-xxx
+Bienvenido ala calculadora,con el tiempo la funcionalidad de la calculadora
+mejoraria con la implementacion de nuevas funciones, mientras tanto.. disfruta y
+juega con ella =)
 1 - Suma
 2 - Resta
 3 - Multiplicacion
