@@ -12,73 +12,74 @@ juega con ella =)
 Elige una opcion:"""
 opcion = int(input(menu))
 
-def suma(a, b):
-    suma = a + b
+def suma(valor1, valor2):
+    suma = valor1 + valor2
     return suma
 
-def resta(a, b):
-    resta = a - b
+def resta(valor1, valor2):
+    resta = valor1 - valor2
     return resta
 
-def multiplicacion(a, b):
-    multiplicacion = a*b
+def multiplicacion(valor1, valor2):
+    multiplicacion = valor1*valor2
     return multiplicacion
     
-def division(a, b):
-    division = a/b
+def division(valor1, valor2):
+    division = valor1/valor2
     return division
+    #tengo que agregar las opciones donde se vuelve infinito o negativo
 
 
-def div_entera(a, b):
-    div_entera = a%b
+def div_entera(valor1, valor2):
+    div_entera = valor1%valor2
     return div_entera
 
 
-def potencia(a, b):
-    potencia = a**b
-    potencia = round(potencia,0)
+def potencia(valor1, valor2):
+    potencia = valor1**valor2
+    potencia = round(potencia,2)
     return potencia
 
-def raiz(a, b):
-    b = 1 / b
+def raiz(valor1, valor2):
+    valor2 = 1 / valor2
     #b = float(b)
     #print(b)
-    raiz = a ** b
+    raiz = valor1 ** valor2
     #print(raiz)
-    raiz = round(raiz,3)
+    raiz = round(raiz,2)
     return raiz
 
 def run():    
     #a = es el valor 1
     #b = es el valor 2
     if opcion == 1:
-        a = float(input('Ingrese un primer valor a sumar: '))
-        b = float(input('Ingrese un segundo valor  sumar: '))
-        print('La suma es: '+ str(suma(a, b)))
+        valor1 = float(input('Ingrese un primer valor a sumar: '))
+        valor2 = float(input('Ingrese un segundo valor  sumar: '))
+        print('La suma es: '+ str(suma(valor1, valor2)))
     elif opcion == 2 :
-        a = float(input('Ingrese un primer valor: '))
-        b = float(input('Ingrese valor a restar: '))
-        print('La resta es: '+ str(resta(a, b)))
+        valor1 = float(input('Ingrese un primer valor: '))
+        valor2= float(input('Ingrese valor a restar: '))
+        print('La resta es: '+ str(resta(valor1, valor2)))
     elif opcion == 3 :
-        a = float(input('Ingrese un primer valor: '))
-        b = float(input('Ingrese valor por que quieres multiplicar: '))
-        print('La Multipliacion es: '+ str(multiplicacion(a, b)))
+        valor1 = float(input('Ingrese un primer valor: '))
+        valor2 = float(input('Ingrese valor por que quieres multiplicar: '))
+        print('La Multipliacion es: '+ str(multiplicacion(valor1, valor2)))
     elif opcion == 4 :
-        a = float(input('Ingrese un primer valor: '))
-        b = float(input('Ingrese un por que quieres dividir: '))
-        print('La Division es: '+ str(division(a, b)))
+        valor1 = float(input('Ingrese un primer valor: '))
+        valor2 = float(input('Ingrese un por que quieres dividir: '))
+        print('La Division es: '+ str(division(valor1, valor2)))
     elif opcion == 5 :
-        a = float(input('Ingrese un primer valor: '))
-        b = float(input('Ingrese un por que quieres dividir: '))
-        print('La Division entera es: '+ str(div_entera(a, b)))
+        valor1 = float(input('Ingrese un primer valor: '))
+        valor2 = float(input('Ingrese un por que quieres dividir: '))
+        print('La Division entera es: '+ str(div_entera(valor1, valor2)))
     elif opcion == 6 :
-        a = float(input('Ingrese valor: '))
-        b = float(input('Ingrese la potencia: '))
-        print('La potencia  es: '+ str(potencia(a, b)))
+        valor1 = float(input('Ingrese valor: '))
+        valor2 = float(input('Ingrese la potencia: '))
+        print('La potencia  es: '+ str(potencia(valor1, valor2)))
     elif opcion == 7 :
-        a = float((input("Ingrese el valor base:")))
-        b = float((input("Ingrese el valor raiz a usar:")))
-        print('La raiz ' + str(b) +' de ' + str(a) + ' es '+ str(raiz(a, b)))
+        valor1 = float((input("Ingrese el valor base:")))
+        valor2 = float((input("Ingrese el valor raiz a usar:")))
+        print('La raiz ' + str(int(valor2)) +' de ' + str(int(valor1)) + ' es '+ str(raiz(valor1, valor2)))
 
 #Quiero probar otra vez el branch
 if __name__ == '__main__':
