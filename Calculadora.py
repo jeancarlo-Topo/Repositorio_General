@@ -49,9 +49,8 @@ def raiz(a, b):
     return raiz
 
 def run():    
-    #a = float(input('Ingrese un primer valor: '))
-    #b = float(input('Ingrese un segundo valor: '))
-   # quitamos informacion no importante
+    #a = es el valor 1
+    #b = es el valor 2
     if opcion == 1:
         a = float(input('Ingrese un primer valor a sumar: '))
         b = float(input('Ingrese un segundo valor  sumar: '))
