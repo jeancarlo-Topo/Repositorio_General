@@ -55,7 +55,8 @@ def run():
     if opcion == 1:
         valor1 = float(input('Ingrese un primer valor a sumar: '))
         valor2 = float(input('Ingrese un segundo valor  sumar: '))
-        print('La suma es: '+ str(suma(valor1, valor2)))
+        print(f'La suma es: {str(suma(valor1, valor2))}')
+        #Aqui estamos usando formatos para printear diferente
     elif opcion == 2 :
         valor1 = float(input('Ingrese un primer valor: '))
         valor2= float(input('Ingrese valor a restar: '))
@@ -79,7 +80,7 @@ def run():
     elif opcion == 7 :
         valor1 = float((input("Ingrese el valor base:")))
         valor2 = float((input("Ingrese el valor raiz a usar:")))
-        print('La raiz ' + str(int(valor2)) +' de ' + str(int(valor1)) + ' es '+ str(raiz(valor1, valor2)))
+        print(f'La raiz {str(int(valor2))} de {str(int(valor1))}  es {str(raiz(valor1, valor2))}')
 
 #Quiero probar otra vez el branch
 if __name__ == '__main__':
