@@ -9,6 +9,7 @@ juega con ella =)
 5 - Division Entera
 6 - Potencia
 7 - Raiz
+8 - Determinacion de raiz cuadrada de un numero
 Elige una opcion:"""
 opcion = int(input(menu))
 
@@ -23,7 +24,7 @@ def resta(valor1, valor2):
 def multiplicacion(valor1, valor2):
     multiplicacion = valor1*valor2
     return multiplicacion
-    
+
 def division(valor1, valor2):
     division = valor1/valor2
     return division
@@ -49,7 +50,7 @@ def raiz(valor1, valor2):
     raiz = round(raiz,2)
     return raiz
 
-def run():    
+def run():
     #a = es el valor 1
     #b = es el valor 2
     if opcion == 1:
@@ -85,4 +86,3 @@ def run():
 #Quiero probar otra vez el branch
 if __name__ == '__main__':
     run()
-    
