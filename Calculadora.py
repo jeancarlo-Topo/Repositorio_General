@@ -16,10 +16,12 @@ opcion = int(input(menu))
 def suma(valor1, valor2):
     suma = valor1 + valor2
     return suma
+    # esta suma es ineficiente, si quisiera sumar muchos datos no podria, hay que revisar eso
 
 def resta(valor1, valor2):
     resta = valor1 - valor2
     return resta
+    #ineficiente, revisar eso que se indico en la suma
 
 def multiplicacion(valor1, valor2):
     multiplicacion = valor1*valor2
@@ -37,47 +39,43 @@ def div_entera(valor1, valor2):
 
 
 def potencia(valor1, valor2):
-    potencia = valor1**valor2
-    potencia = round(potencia,2)
-    return potencia
+    poten = valor1**valor2
+    poten = round(poten,2)
+    return poten
 
 def raiz(valor1, valor2):
     valor2 = 1 / valor2
-    #b = float(b)
-    #print(b)
     raiz = valor1 ** valor2
-    #print(raiz)
     raiz = round(raiz,2)
     return raiz
+    #Hay que revisar lo que hay que hacer para variables negativas
 
 def run():
-    #a = es el valor 1
-    #b = es el valor 2
     if opcion == 1:
         valor1 = float(input('Ingrese un primer valor a sumar: '))
         valor2 = float(input('Ingrese un segundo valor  sumar: '))
-        print(f'La suma es: {str(suma(valor1, valor2))}')
+        print(f'La suma es: {suma(valor1, valor2)}')
         #Aqui estamos usando formatos para printear diferente
     elif opcion == 2 :
         valor1 = float(input('Ingrese un primer valor: '))
         valor2= float(input('Ingrese valor a restar: '))
-        print('La resta es: '+ str(resta(valor1, valor2)))
+        print(f'La resta es {resta(valor1, valor2)}')
     elif opcion == 3 :
         valor1 = float(input('Ingrese un primer valor: '))
         valor2 = float(input('Ingrese valor por que quieres multiplicar: '))
-        print('La Multipliacion es: '+ str(multiplicacion(valor1, valor2)))
+        print(f'La Multipliacion es {multiplicacion(valor1, valor2)}')
     elif opcion == 4 :
         valor1 = float(input('Ingrese un primer valor: '))
         valor2 = float(input('Ingrese un por que quieres dividir: '))
-        print('La Division es: '+ str(division(valor1, valor2)))
+        print(f'La Division es {division(valor1, valor2)}')
     elif opcion == 5 :
         valor1 = float(input('Ingrese un primer valor: '))
         valor2 = float(input('Ingrese un por que quieres dividir: '))
-        print('La Division entera es: '+ str(div_entera(valor1, valor2)))
+        print(f'La Division entera es {div_entera(valor1, valor2)}')
     elif opcion == 6 :
         valor1 = float(input('Ingrese valor: '))
         valor2 = float(input('Ingrese la potencia: '))
-        print('La potencia  es: '+ str(potencia(valor1, valor2)))
+        print(f'La potencia  es {potencia(valor1, valor2)}')
     elif opcion == 7 :
         valor1 = float((input("Ingrese el valor base:")))
         valor2 = float((input("Ingrese el valor raiz a usar:")))
