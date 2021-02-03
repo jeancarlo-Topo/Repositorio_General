@@ -52,7 +52,11 @@ def raiz(valor1, valor2):
     #Hay que revisar lo que hay que hacer para variables negativas
 def factorial(valor1):
     #Aqui el factorial es un int <= a 1, la formula de factorial es n*(n-1)!, esta es la que estaremos integrando a la calculadora
-    if valor1 == 1:
+    #if valor1 == 1:
+     #   return 1
+    #elif valor1 == 0 :
+    #    return 1 OJO QUE AQUI LO PODIA HACER SEPARADO PERO ES LO MISMO QUE DECIR QUE SI EL NUMERO ES MENOR A 2 , OSEA 1 Y 0 ENTONCES DEVUELVAME 1
+    if valor1 < 2 :
         return 1
     return valor1 * factorial(valor1-1)
 
