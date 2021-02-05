@@ -11,6 +11,7 @@ juega con ella =)
 7 - Raiz
 8 - Determinacion de raiz cuadrada de un numero
 9 - Factoriales
+10 - Fibbonacci (Numeros enteros mayores a 1)
 Elige una opcion:"""
 opcion = int(input(menu))
 
@@ -60,6 +61,19 @@ def factorial(valor1):
         return 1
     return valor1 * factorial(valor1-1)
 
+    
+fibonacci_cache ={}#La computadora tiene que hacer muchas iteraciones varias veces por lo que este diccionario ayuda a que se guarden los datos para que la funcion tome los datos ya cacheados y luego trabaje sobre eso
+def fibonacci(valor1):
+    #print(valor1)
+    if 0 <= valor1 <= 1 :
+        return 1
+    valor1 = fibonacci(valor1 - 1)+ fibonacci(valor1 - 2)
+    fibonacci_cache[valor1] = valor1
+    #print(valor1)
+
+    return valor1
+    
+
 def run():
     if opcion == 1:
         valor1 = float(input('Ingrese un primer valor a sumar: '))
@@ -98,6 +112,12 @@ def run():
             valor1 = abs(valor1)
             print(f' No se puede valorar un negativo, por lo tanto se toma su valor absoluto')
         print(f' El factorial de {valor1} es {factorial(valor1)}')
+
+    elif opcion == 10 :
+        valor1 = int(input("Ingrese un numero: "))
+        if valor1 < 0 :
+            print(f'Recuerde que para calcular los fibbonacci los numeros son enteros, osea del 0 en adelante')
+        print(f'El numero fibonnacci de {valor1} es {fibonacci(valor1)}') 
 
 #Quiero probar otra vez el branch
 if __name__ == '__main__':
