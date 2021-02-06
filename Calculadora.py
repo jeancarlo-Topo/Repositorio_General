@@ -10,7 +10,7 @@ Bienvenido ala calculadora,actualmente se encuentra bajo actualizacion por lo qu
 8 - Determinacion de raiz cuadrada de un numero
 9 - Factoriales
 10 - Fibbonacci (Numeros enteros mayores a 1)
-Elige una opcion:"""
+Elige una opcion: """
 opcion = int(input(menu))
 
 def suma(valor1, valor2):
@@ -43,10 +43,15 @@ def potencia(valor1, valor2):
     return poten
 
 def raiz(valor1, valor2):
-    valor2 = 1 / valor2
-    raiz = valor1 ** valor2
-    raiz = round(raiz,2)
-    return raiz
+    try:
+        valor2 = 1 / valor2
+        raiz = valor1 ** valor2
+        raiz = round(raiz,2)
+        return raiz
+    except TypeError as _e:
+        print(f'Por ahora no es posible la raiz de un numero negativo')
+
+    
     #Hay que revisar lo que hay que hacer para variables negativas
 def factorial(valor1):
     #Aqui el factorial es un int <= a 1, la formula de factorial es n*(n-1)!, esta es la que estaremos integrando a la calculadora
@@ -98,9 +103,12 @@ def run():
         valor2 = float(input('Ingrese la potencia: '))
         print(f'La potencia  es {potencia(valor1, valor2)}')
     elif opcion == 7 :
-        valor1 = float((input("Ingrese el valor base:")))
-        valor2 = float((input("Ingrese el valor raiz a usar:")))
-        print(f'La raiz {str(int(valor2))} de {str(int(valor1))}  es {str(raiz(valor1, valor2))}')
+        valor1 = float((input("Ingrese un numero:")))
+        valor2 = float((input("Ingrese la raiz a usar:")))
+        if raiz(valor1, valor2) == None:
+            pass
+        else:
+            print(f'La raiz {str(int(valor2))} de {str(int(valor1))}  es {str(raiz(valor1, valor2))}')
     elif opcion == 8 :
         print(f'Actualmente se esta trabajando en integrar esta funcion')
     elif opcion == 9 :
