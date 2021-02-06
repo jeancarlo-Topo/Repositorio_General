@@ -74,7 +74,7 @@ def fibonacci(valor1):
     valor1 = fibonacci(valor1 - 1)+ fibonacci(valor1 - 2)
     fibonacci_cache[valor1] = valor1
     #print(valor1)
-
+#FIBONACCI tiene un error que no permite que se hagan iteraciones rapido
     return valor1
     
 
