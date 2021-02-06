@@ -32,7 +32,6 @@ def multiplicacion(valor1, valor2):
 def division(valor1, valor2):
     division = valor1/valor2
     return division
-    #tengo que agregar las opciones donde se vuelve infinito o negativo
 
 
 def div_entera(valor1, valor2):
