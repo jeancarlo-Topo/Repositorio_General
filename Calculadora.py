@@ -1,7 +1,5 @@
 menu = """
-Bienvenido ala calculadora,con el tiempo la funcionalidad de la calculadora
-mejoraria con la implementacion de nuevas funciones, mientras tanto.. disfruta y
-juega con ella =)
+Bienvenido ala calculadora,actualmente se encuentra bajo actualizacion por lo que apreciamos su paciencia, muchas gracias
 1 - Suma
 2 - Resta
 3 - Multiplicacion
