@@ -28,10 +28,6 @@ def multiplicacion(valor1, valor2):
     return multiplicacion
 
 def division(valor1, valor2):
-<<<<<<< HEAD
-    division = valor1/valor2
-    return division
-=======
     try:
         division = valor1/valor2
         return division
@@ -39,7 +35,6 @@ def division(valor1, valor2):
         #Hay que revisar bien esta sintaxis para usarla en otras cosas, esto ayudaria a no usar if que muchas veces joden
         print(f'Division entre 0 es infinito, no es posible hacer la division' )
     #tengo que agregar las opciones donde se vuelve infinito o negativo
->>>>>>> prueba_try_except
 
 
 def div_entera(valor1, valor2):
