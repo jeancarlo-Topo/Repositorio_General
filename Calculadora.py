@@ -28,8 +28,18 @@ def multiplicacion(valor1, valor2):
     return multiplicacion
 
 def division(valor1, valor2):
+<<<<<<< HEAD
     division = valor1/valor2
     return division
+=======
+    try:
+        division = valor1/valor2
+        return division
+    except ZeroDivisionError as _e:#_e estoy diciendo al except que me guarde el error en _e, el underscore es para que no me tire el error de unused variable 
+        #Hay que revisar bien esta sintaxis para usarla en otras cosas, esto ayudaria a no usar if que muchas veces joden
+        print(f'Division entre 0 es infinito, no es posible hacer la division' )
+    #tengo que agregar las opciones donde se vuelve infinito o negativo
+>>>>>>> prueba_try_except
 
 
 def div_entera(valor1, valor2):
@@ -72,7 +82,7 @@ def fibonacci(valor1):
     valor1 = fibonacci(valor1 - 1)+ fibonacci(valor1 - 2)
     fibonacci_cache[valor1] = valor1
     #print(valor1)
-
+#FIBONACCI tiene un error que no permite que se hagan iteraciones rapido
     return valor1
     
 
@@ -93,7 +103,10 @@ def run():
     elif opcion == 4 :
         valor1 = float(input('Ingrese un primer valor: '))
         valor2 = float(input('Ingrese un por que quieres dividir: '))
-        print(f'La Division es {division(valor1, valor2)}')
+        if division(valor1, valor2) == None:#Aqui le digo al programa que si me devuelven un none entonces no haga nada, si no estuviera entonces haria un print de lo que sigue y no es la idea
+            pass
+        else:
+            print(f'La Division es {division(valor1, valor2)}')
     elif opcion == 5 :
         valor1 = float(input('Ingrese un primer valor: '))
         valor2 = float(input('Ingrese un por que quieres dividir: '))
